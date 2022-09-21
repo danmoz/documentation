@@ -105,10 +105,10 @@ The following code samples outline sample extractors you might use for propagati
 {{% tab "Python" %}}
 ```py
 def extractor(payload):
-    trace_headers = json.loads(payload["_datadog"]);
-    trace_id = trace_headers["x-datadog-trace-id"];
-    parent_id = trace_headers["x-datadog-parent-id"];
-    sampling_priority = trace_headers["x-datadog-sampling-priority"];
+    trace_headers = json.loads(payload["_datadog"])
+    trace_id = trace_headers["x-datadog-trace-id"]
+    parent_id = trace_headers["x-datadog-parent-id"]
+    sampling_priority = trace_headers["x-datadog-sampling-priority"]
     return trace_id, parent_id, sampling_priority
 ```
 {{% /tab %}}
